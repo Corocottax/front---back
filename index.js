@@ -81,9 +81,6 @@ const login = async (options) => {
     const respuesta = await res.json();
     localStorage.setItem("token", respuesta.token);
     console.log(respuesta.rol);
-    if (respuesta.rol === "admin") {
-        createForm();
-    }
     getAllLibros();
 
 }
